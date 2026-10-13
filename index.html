@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page-container">
+        <section class="calculator-card" aria-labelledby="page-title">
+            <h1 id="page-title">Age Calculator</h1>
+
+            <form id="age-form" novalidate>
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+
+                <p class="error-message" id="error-message" role="alert" aria-live="polite"></p>
+
+                <div class="button-row">
+                    <button type="submit" class="calculate-button">Calculate Age</button>
+                    <button type="button" id="reset-button" class="reset-button">Reset</button>
+                </div>
+            </form>
+
+            <section id="result" class="result-panel" aria-label="Calculated age" aria-live="polite" hidden>
+                <div class="age-stat">
+                    <strong id="years-result">0</strong>
+                    <span>Years</span>
+                </div>
+                <div class="age-stat">
+                    <strong id="months-result">0</strong>
+                    <span>Months</span>
+                </div>
+                <div class="age-stat">
+                    <strong id="days-result">0</strong>
+                    <span>Days</span>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
